@@ -3,8 +3,9 @@ import "./App.css";
 import TicTacToe from "./components/TicTacToe";
 const App = () => {
   return (
-    <>
+    <><div className="main-container">
       <TicTacToe />
+    </div>
     </>
   );
 };

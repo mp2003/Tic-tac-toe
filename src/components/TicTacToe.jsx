@@ -3,7 +3,7 @@ import Board from "./Board";
 import GameState from "./GameState";
 import GameOver from "./GameOver";
 import Reset from "./Reset";
-import ClickSound from "../assets/click.wav";
+import ClickSound from "../assets/click1.wav";
 import GameOverSound from "../assets/gameOver.wav";
 
 const gameOverSound = new Audio(GameOverSound);
@@ -45,6 +45,7 @@ function checkWinner(tile, setStrikeClass, setGameState) {
       } else {
         setGameState(GameState.playerYWin);
       }
+      return;
     }
   }
   if (tile.every((t) => t !== null)) setGameState(GameState.gameDraw);
@@ -89,7 +90,7 @@ const TicTacToe = () => {
     setStrikeClass(null);
   };
   return (
-    <div>
+    <div className="tic-tac-toe-container">
       <h1>TicTacToe</h1>
       <Board
         playerTurn={playerTurn}
